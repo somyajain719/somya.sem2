@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FoodHub Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h2>FoodHub Pro</h2>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Menu</a>
+        <a href="#">Cart</a>
+        <button onclick="toggleTheme()">Dark Mode</button>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Order Delicious Food Online</h1>
+    <p>Search, filter and add your favourite food to cart.</p>
+    <input type="text" id="searchBox" placeholder="Search food...">
+</section>
+
+<section class="categories">
+    <button onclick="filterFood('all')">All</button>
+    <button onclick="filterFood('Pizza')">Pizza</button>
+    <button onclick="filterFood('Burger')">Burger</button>
+    <button onclick="filterFood('Drinks')">Drinks</button>
+</section>
+
+<section class="main">
+    <div>
+        <h2>Food Menu</h2>
+        <div id="foodContainer" class="food-container"></div>
+    </div>
+
+    <div class="cart">
+        <h2>Your Cart</h2>
+        <ul id="cartList"></ul>
+        <h3>Total: ₹<span id="total">0</span></h3>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 FoodHub Pro | Smart Food Ordering System</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

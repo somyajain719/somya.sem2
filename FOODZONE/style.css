@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f8f8;
+    color: #222;
+}
+
+header {
+    background: #ff4d4d;
+    color: white;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a, nav button {
+    margin-left: 15px;
+    color: white;
+    text-decoration: none;
+    background: none;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: #ffe3e3;
+}
+
+.hero h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.hero input {
+    margin-top: 20px;
+    width: 320px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+}
+
+.categories {
+    text-align: center;
+    padding: 20px;
+}
+
+.categories button {
+    padding: 10px 18px;
+    margin: 8px;
+    border: none;
+    background: #ff4d4d;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 25px;
+    padding: 30px;
+}
+
+.food-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 20px;
+}
+
+.card {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #ddd;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 10px 0;
+}
+
+.card button {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 9px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.cart {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #ddd;
+    height: fit-content;
+}
+
+.cart li {
+    margin: 10px 0;
+}
+
+.cart button {
+    margin-left: 8px;
+    background: #222;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.dark {
+    background: #121212;
+    color: white;
+}
+
+.dark .card,
+.dark .cart {
+    background: #1f1f1f;
+}
+
+.dark .hero {
+    background: #2b2b2b;
+}
+
+@media(max-width: 900px) {
+    .main {
+        grid-template-columns: 1fr;
+    }
+
+    .food-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 600px) {
+    header {
+        flex-direction: column;
+    }
+
+    .food-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero input {
+        width: 90%;
+    }
+}
